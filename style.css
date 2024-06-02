@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900");
+@import url("fontawesome-all.min.css");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nanum Myeongjo", "Josefin Slab", "Open Sans", "Poppins", "Dosis", sans-serif;
+}
+
+body{
+    background: #081b29;
+}
+
+.port_img img{
+    height: 270px;
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+    filter: grayscale(100%);
+    border-bottom: 10px solid rgb(28, 129, 187);
+    
+    
+
+}
+.port_img img:hover{
+    filter: grayscale(0);
+    transform:scale(1.05);
+}
+.portname {
+    position: relative;
+}
+
+.loader {
+    margin-top: 1px;
+    font-size: 2.5rem;
+    color: white;
+    position: relative;
+    text-align: center;
+    color: #ffffff;
+    font-size: 2.35em;
+    font-weight: 900;
+    letter-spacing: 0.035em;
+    line-height: 1em;
+    background-color: var(--color-white-shade);
+}
+
+span {
+    animation: blur 4s infinite;
+    margin:0.2rem;
+}
+
+@keyframes blur {
+    0% {
+        filter: blur(0);
+    }
+    25% {
+        filter: blur(1px);
+    }
+    50% {
+        filter: blur(5px);
+    }
+    75% {
+        filter: blur(1px);
+    }
+    100% {
+        filter: blur(0);
+    }
+}
+
+.loader span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.loader span:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.loader span:nth-child(3) {
+    animation-delay: 0.8s;
+}
+
+.loader span:nth-child(4) {
+    animation-delay: 1s;
+}
+
+.loader span:nth-child(5) {
+    animation-delay: 1.4s;
+}
+
+.loader span:nth-child(6) {
+    animation-delay: 1.8s;
+}
+
+.portname p{
+    font-size: 1.35em;
+    margin: 0.75em 0 0.25em 0;
+    opacity: 0.40;
+    text-align: center;
+    animation: animate 5s linear infinite;
+    
+}
+
+/* @keyframes animate{
+    0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%
+    {
+        color: #0e3742;
+        box-shadow: none;
+    }
+    18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%
+    {
+        color: #fff;
+        text-shadow: 0 0 10px #03bcf4,
+                    0 0 20px #03bcf4,
+                    0 0 40px #03bcf4,
+                    0 0 80px #03bcf4,
+                    0 0 100px #03bcf4,
+        
+    }
+} */
+.icons {
+    text-align: center;
+    margin-top: 20px;
+    align-items: center;
+}
+.icons i {
+    text-decoration: none;
+    color: #fff;
+    font-size: 30px;
+    padding-left: 14px;
+    padding-top: 5px;
+    transition: 0.3s ease;
+    text-align: center;
+  }
+  
+  .icons i:hover {
+    color: #1d1d1d;
+  }
+  .badge{
+    text-align: center;
+    height: 50px;
+  }
+  .badge img{
+    height: 150px;
+    text-align: center;
+    filter: grayscale(100%);
+    cursor: pointer;
+
+  }
+  .badge a img:hover{
+    filter: grayscale(0);
+    transform:scale(1.05);
+  }
+  .wave{
+    color: #5ccae6;
+    font-size: 30px;
+    transform-style: preserve-3d;
+    transition: all.3s ease;
+    animation: wave 2.4s ease infinite;
+    transform-origin: 50%;
+
+  }
+  .wave span{
+    position: relative;
+  }
+.bgAnimation{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(20,1fr);
+    grid-template-rows: repeat(20,1fr);
+    background: #1d1d1d;
+    filter: saturate(2);
+    overflow: hidden;
+}
+
+.colorBox{
+    z-index: 2;
+    filter: brightness(1.1);
+    transition: 2s ease;
+    position: relative;
+    margin: 2px;
+    background: #1d1d1d;
+}
+
+.colorBox:hover{
+    background: #00bfff;
+    transition-duration: 0s;
+}
+
+.backgroundAmim{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: #00bfff;
+    filter: blur(60px);
+    animation: animBack 6s linear infinite;
+}
+
+@keyframes animBack {
+    0%{
+        top: -60px;
+    }
+    100%{
+        top: 120%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .port_img img{
+    height: 300px;
+    position:relative;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 1s;
+    margin-top: 20%;
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(--main-color);
+    cursor: pointer;
+}
+.port_img img:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--main-color),
+                0 0 50px var(--main-color),
+                0 0 100px var(--main-color);
+
+}
+.portname h1{
+    color: #ffff;
+    display: flex;
+    position: relative;
+    left: 50%;
+    letter-spacing: 5px;
+}
+.portname h1 p{
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 500px;
+    margin-top: 5px;
+    color: #ffff; */
+/* } 
+.badgets img::before{
+    content: url();
+    position: absolute;
+    inset: 0;
+    box-shadow: 0 1px hsl(0 0% 100%/0.15)inset;
+    background: hsl(0 0% 100%);
+  }
+  .badgets img::after{
+    contain:"";
+    position: absolute;
+    inset: -4px;
+    filter: blur(20px);
+    background: radial-gradient(50% 50% at center, hsl(var(--hue)80% 85%),hsl(var(--hue)80% 70%), transparent);
+  } */
